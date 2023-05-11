@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>oFig</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__titles">
+          <h1 class="header__title">oFig</h1>
+          <h2 class="header__subtitle">Figurines et statuettes</h2>
+        </div>
+        <div class="header__cart">
+          Votre panier <em class="header__number-articles">2 prodruits</em>
+        </div>
+      </header>
+      <main>
+        <div class="discount-badge">
+          <em class="discount-badge__text">soldes</em>
+        </div>
+        <form class="delivery" action="">
+          <h2 class="delivery__title">Preference de livraison</h2>
+          <div class="delivery__form">
+            <div class="delivery__form-left">
+              <div class="delivery__preference">
+                <h3 class="delivery__subtitle">
+                  Où souhaitez vous être livré ?
+                </h3>
+                <div class="delivery__preference-choices">
+                  <div class="delivery__preference-choice">
+                    <input
+                      type="radio"
+                      name="delivery__preference"
+                      id="home-address"
+                    />
+                    <label for="home-address">Mon adresse courante</label>
+                  </div>
+                  <div class="delivery__preference-choice">
+                    <input
+                      type="radio"
+                      name="delivery__preference"
+                      id="another-address"
+                    />
+                    <label for="another-address">Autre adresse</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="delivery__options">
+                <h3 class="delivery__subtitle">Options</h3>
+                <div class="delivery__option">
+                  <input
+                    type="checkbox"
+                    name="delivery__sms-option"
+                    id="delivery__sms-option"
+                  />
+                  <label for="delivery__sms-option"
+                    >Suivi de la livraison par sms (inclus)</label
+                  >
+                </div>
+                <div class="delivery__option">
+                  <input
+                    type="checkbox"
+                    name="delivery__refund-option"
+                    id="delivery__refund-option"
+                  />
+                  <label for="delivery__options-sms"
+                    >Satisfait ou remboursé (+ 2 euros)</label
+                  >
+                </div>
+                <div class="delivery__option">
+                  <input
+                    type="checkbox"
+                    name="delivery__waranty-option"
+                    id="delivery__waranty-option"
+                  />
+                  <label for="delivery__options-sms"
+                    >Garantie 2 ans (+ 10 euros)</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="delivery__form-right">
+              <div class="delivery__address">
+                <h3 class="delivery__subtitle">Adresse</h3>
+                <div class="delivery__address-form">
+                  <label class="delivery__address-label" for="delivery__street"
+                    >Rue</label
+                  >
+                  <input
+                    class="delivery__address-input"
+                    type="text"
+                    name="delivery__street"
+                    id="delivery__street"
+                  />
+                  <label
+                    class="delivery__address-label"
+                    for="delivery__postal-code"
+                    >Code postal</label
+                  >
+                  <input
+                    class="delivery__address-input"
+                    type="number"
+                    name="delivery__postal-code"
+                    id="delivery__postal-code"
+                  />
+                  <label class="delivery__address-label" for="delivery__city"
+                    >Ville</label
+                  >
+                  <input
+                    class="delivery__address-input"
+                    type="text"
+                    name="delivery__city"
+                    id="delivery__city"
+                  />
+                </div>
+              </div>
+              <div class="delivery__other-info">
+                <h3 class="delivery__subtitle">Informations complémentaires</h3>
+                <label class="delivery__misc-label" for="delivery__misc"
+                  >interphone, bâtiment, etc</label
+                >
+                <textarea
+                  class="delivery__misc-textarea"
+                  id="delivery__misc"
+                  name="delivery__misc"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="delivery__price">
+            <p class="delivery__price-text">Montant total à régler :</p>
+            <em class="delivery__price-sum">197 €</em>
+          </div>
+          <div class="delivery__validation">
+            <button class="delivery__return-button">
+              Continuer vos achats
+            </button>
+            <button class="delivery__submit-button" type="submit">
+              Valider et payer
+            </button>
+          </div>
+        </form>
+      </main>
+      <footer class="footer">
+        oFig - toutes les images sont sous copyright SquareEnix
+      </footer>
+    </div>
+  </body>
+</html>

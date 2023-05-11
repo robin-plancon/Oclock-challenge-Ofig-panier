@@ -1,0 +1,311 @@
+/* On peu créer des variables en css */
+/* Une boite qui contient une valeur */
+/* Ca va permettre de centraliser l'endroit où est stocker mes valeurs */
+:root {
+    --primary: #c80000;
+    --dark-primary: #a00000;
+    --secondary: #C0FFEE;
+    --dark-gray: #666;
+    --light-gray: #ccc;
+  }
+  
+  html {
+    font-size: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .header {
+    color: #fff;
+    width: 100%;
+    /* Je sors mon élément de la page pour le positionner au dessus */
+    /* position: fixed; */
+    /* position: sticky; */
+    /* On va avoir une profondeur sur nos éléments pour savoir lequel doit se situer au dessus */
+    /* On utilise z-index qui indique la prioriété en cas de superposition */
+    /* z-index: 1; */
+    /* Je vais lui dire à quel endroit il doit se situer */
+    /* La position se fait en fonction de la balise `<body>` */
+    /* top: 0; */
+    /* bottom: 0;
+    left: 0;
+    right: 0; */
+  }
+  
+  .header__titles {
+    background-color: var(--primary);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+  
+  .header__title {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+  .header__subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .header__cart {
+    background-color: var(--dark-gray);
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+  }
+  
+  .header__number-articles {
+    font-style: italic;
+  }
+  
+  .footer {
+    text-align: center;
+    background-color: var(--dark-gray);
+    padding: 0.5rem;
+    color: #fff;
+    margin-top: auto;
+  }
+
+  .delivery {
+    margin: 1.5rem auto;
+    width: 70%;
+  }
+
+  .delivery__title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .delivery__subtitle {
+    color: var(--dark-gray);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .delivery__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .delivery__form-left {
+    width: 50%;
+  }
+
+  .delivery__form-right {
+    width: 50%;
+  }
+
+  .delivery__preference-choices {
+    margin: 2rem 0;
+  }
+
+  .delivery__preference-choice {
+    margin: 0.5rem 0;
+  }
+
+  .delivery__option {
+    margin: 1rem 0;
+  }
+
+  .delivery__address-form {
+    margin: 2rem auto;
+  }
+
+  .delivery__address-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .delivery__address-input {
+    display: block;
+    margin-bottom: 0.2rem;
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .delivery__misc-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .delivery__misc-textarea {
+    border: none;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .delivery__price {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 3rem;
+    margin: 0 3rem;
+  }
+
+  .delivery__price-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .delivery__price-sum {
+    font-size: 2;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .delivery__validation {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .delivery__return-button {
+    background-color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+  }
+
+  .delivery__submit-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+  }
+
+  .discount-badge {
+    position: sticky;
+    left: 0;
+    top: 50%;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0 0.5rem 0.5rem 0;
+
+  }
+  
+  .product-list {
+    height: 80vh;
+    overflow-y: auto;
+  
+    max-width: 80rem;
+    margin: 11.5rem auto 1.5rem;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem
+  }
+  
+  .product {
+    width: 30%;
+    display: flex;
+    /* J'affiche mes éléments les uns en dessous des autres */
+    flex-direction: column;
+    gap: 1rem;
+    border: 0.1rem solid var(--light-gray);
+    padding: 1rem;
+    position: relative;
+  }
+  
+  /* Au hover sur mon produit, je modifie les variables css */
+  .product:hover {
+    --primary: #F0F;
+    --dark-primary: #0F0;
+    --secondary: #0F0;
+  }
+  
+  .product__discount {
+    /* transition permet de changer la valeur de propriété css sur une durée plutôt que d'un coup */
+    transition: all 0.5s;
+    background-color: var(--primary);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--dark-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-weight: bold;
+  
+    /* Position absolute, je retire mon élément du flow naturel de la page */
+    /* Je le position en fonction du parent ayant une position relatif le plus proche */
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  
+  .product__saga {
+    color: var(--light-gray);
+    border-bottom: 0.1rem solid var(--light-gray);
+    padding: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .product__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .product__description {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  
+  .product__add-to-cart {
+    transition: all 0.5s;
+    font-family: 'Raleway', sans-serif;
+    margin-top: auto;
+    /* J'étends mon élément de 0.5rem sur la gauche et la droite */
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    background-color: var(--primary);
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .product__price {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  .product__price--strike {
+    text-decoration: line-through;
+    font-weight: normal;
+    font-size: 1.3rem;
+  }
